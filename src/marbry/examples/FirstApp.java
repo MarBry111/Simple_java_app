@@ -1,6 +1,7 @@
 package marbry.examples;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -64,6 +65,8 @@ public class FirstApp {
             public void actionPerformed(ActionEvent e) {
                 //checking if field for email is empty, adding in front of ! - negation
                 if( jtfEmail.getText().equals("") ){
+                    //change field color to red
+                    jlbInfo.setForeground(Color.RED);
                     //print to console
                     System.out.println("Error, empty email");
                     //write to our field under button
@@ -71,6 +74,7 @@ public class FirstApp {
                 }
                 else {
                     //sout
+                    jlbInfo.setForeground(Color.BLACK);
                     System.out.println("Saving to database");
                     System.out.println("Email: " + jtfEmail.getText());
                     System.out.println("Gender: " + (jrbMen.isSelected() ? "men" : "women"));
